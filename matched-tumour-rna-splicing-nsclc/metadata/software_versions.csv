@@ -1,0 +1,17 @@
+component,version_or_release,role,source_or_note
+MC3,0.2.8,Somatic variant calls,Version stated in Supplementary Methods
+Reference genome,GRCh38,Variant and transcript coordinate reference,Version stated in Supplementary Methods
+UCSC liftOver chain,hg19ToHg38,GRCh37-to-GRCh38 coordinate conversion,Chain name stated in Supplementary Methods; chain checksum not reported
+Ensembl VEP,116,Variant annotation,Version stated in Supplementary Methods
+GENCODE,50,Transcript annotation,Version stated in Supplementary Methods
+MANE,1.5,Transcript priority annotation,Version stated in Supplementary Methods
+recount3/Snaptron,Not reported,TCGA junction retrieval,Resource family stated in Supplementary Methods
+SpliceAI,1.3.1,Splice prediction,Version stated in Supplementary Methods
+Pangolin,1.0.2,Splice prediction,Version stated in Supplementary Methods
+Snaptron,2.2,GTEx normal-lung junction query,Version stated in Supplementary Methods
+GTEx lung samples,655,Normal-lung route prevalence context,Sample count stated in Supplementary Methods
+decoupleR,2.16.0,Transcription-factor and pathway activity,Version stated in Supplementary Methods
+CPTAC/LinkedOmicsKB freeze,1.2,External molecular reference data,Freeze stated in Supplementary Methods
+Python runtime,Not reported,Selected analysis modules,Exact runtime version not reported in Methods
+Python packages,Not reported,Selected analysis modules,Exact package versions not reported in Methods
+R runtime and packages,Partially reported,Core C and CPTAC modules,Exact runtime versions except decoupleR not reported in Methods

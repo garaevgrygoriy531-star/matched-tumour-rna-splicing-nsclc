@@ -1,0 +1,16 @@
+resource,version_or_release,role,official_entry_point,provenance_note
+TCGA/GDC,See Methods,Primary-tumour cohort and RNA expression,https://portal.gdc.cancer.gov/,Exact file accessions and checksums not reported in the Methods
+MC3,0.2.8,Somatic variant calls,https://portal.gdc.cancer.gov/,Exact release artifact accession/checksum not captured in this package
+UCSC liftOver chain,hg19ToHg38,Coordinate conversion,https://hgdownload.cse.ucsc.edu/goldenPath/hg19/liftOver/,Use the V3-specified chain; exact chain checksum not captured
+Ensembl VEP,116,Variant effect annotation,https://www.ensembl.org/info/docs/tools/vep/index.html,Reference build and version stated in Methods
+GENCODE Human,50,Transcript and gene annotation,https://www.gencodegenes.org/human/,GRCh38 annotation release stated in Methods
+MANE,1.5,Transcript priority annotation,https://www.ncbi.nlm.nih.gov/refseq/MANE/,Release stated in Methods
+recount3,Not reported,TCGA RNA junction resource,https://rna.recount.bio/,Resource family stated in Methods
+Snaptron,2.2,GTEx normal-lung junction query,https://snaptron.idies.jhu.edu/,Version stated in Methods; query endpoints and checksums not captured
+SpliceAI,1.3.1,Splice prediction,https://github.com/Illumina/SpliceAI,Version stated in Methods; model assets are not redistributed
+Pangolin,1.0.2,Splice prediction,https://github.com/tkzeng/Pangolin,Version stated in Methods; model assets are not redistributed
+GTEx lung,Not specified beyond Snaptron v2.2,Normal-lung route prevalence,https://gtexportal.org/home/,Methods report 655 lung samples queried through Snaptron
+GDC ASCAT3,Not reported,Allele-specific copy-number segments,https://portal.gdc.cancer.gov/,Exact file accessions and checksums not reported in the Methods
+LinkedOmicsKB/CPTAC,Freeze 1.2,External molecular reference data,https://kb.linkedomics.org/download,Freeze stated in Methods
+CIViC,Not reported,Clinically anchored gene-set evidence,https://civicdb.org/,Supplementary Table S1 states accepted lung-cancer evidence; exact query/freeze not included
+decoupleR,2.16.0,Transcription-factor and pathway activity,https://saezlab.github.io/decoupleR/,Version stated in Methods

@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the associated manuscript and software archive."
+title: "Code for: Matched tumour RNA resolves somatic splice outcomes beyond sequence prediction in non-small-cell lung cancer"
+type: software
+authors:
+  - family-names: Ye
+    given-names: Yilin
+  - family-names: Zhu
+    given-names: Lianxin
+  - family-names: Chen
+    given-names: Cui
+  - family-names: Sun
+    given-names: Peng
+  - family-names: Zhu
+    given-names: Zhihua
+version: 1.0.0
+date-released: 2026-10-02
+license: MIT

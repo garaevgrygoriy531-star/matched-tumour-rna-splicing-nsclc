@@ -1,0 +1,56 @@
+parameter,analysis,value,interpretation
+primary_tumours,cohort,1016,Matched TCGA primary tumour DNA and RNA samples
+LUAD_samples,cohort,516,Lung adenocarcinoma primary tumours
+LUSC_samples,cohort,500,Lung squamous cell carcinoma primary tumours
+analysis_genes,gene_set,68,Clinically anchored genes listed in data/analysis_gene_set.csv
+minimum_total_reads,cohort_selection,>10000000,Minimum total RNA-sequencing reads
+minimum_junction_reads,cohort_selection,>1000000,Minimum junction-read count
+minimum_uniquely_mapped_fraction,cohort_selection,>=0.50,Minimum uniquely mapped fraction
+RNA_evaluable_instance_count,cohort,2373,Variant–histology instances
+candidate_DNA_RNA_pair_count,cohort,22469,Candidate DNA–RNA pairs
+supported_transition_count,cohort,78,Supported DNA–RNA transitions
+RNA_resolved_event_count,cohort,9,Final RNA-resolved events
+minimum_recurrent_carriers,recurrent_calling,>=3,Minimum evaluable carriers per recurrent variant–junction relationship
+minimum_recurrent_noncarriers,recurrent_calling,>=20,Minimum evaluable non-carriers per recurrent variant–junction relationship
+recurrent_event_FDR,recurrent_calling,<0.05,Beta-binomial model with Benjamini-Hochberg correction
+local_splice_cluster_evaluability,splice_cluster,>=10,Minimum total cluster coverage in reads
+variant_to_junction_window,splice_linkage,100_bp,Window around exon boundaries using the selected transcript
+rare_call_minimum_coverage,rare_calling,>=20,Local splice-cluster coverage
+rare_call_minimum_target_count,rare_calling,>=5,Target junction read count
+rare_call_minimum_usage_percentile,rare_calling,>=99th_noncarrier_percentile,Target usage threshold relative to non-carriers
+rare_call_minimum_robust_z,rare_calling,>=3.5,Robust z-score threshold
+rare_call_maximum_noncarrier_prevalence,rare_calling,<=0.05,Event prevalence among non-carriers
+conditional_null_iterations,primary_null,10000,Permutation iterations
+coverage_matched_null_iterations,coverage_matched_null,10000,Permutation iterations
+empirical_P_correction,nulls,(b+1)/(B+1),One-sided add-one empirical P-value
+coverage_matching_bins,coverage_matched_null,10,Within-stratum log1p coverage deciles; nearest non-empty adjacent decile fallback
+strong_reciprocal_abnormal_usage,reciprocal_junction,>99th_noncarrier_percentile,Abnormal junction usage criterion
+strong_reciprocal_canonical_usage,reciprocal_junction,<10th_noncarrier_percentile,Canonical junction usage criterion for strong reciprocal redistribution
+directional_reciprocal_canonical_usage,reciprocal_junction,<noncarrier_median,Canonical junction usage criterion for directional redistribution
+SpliceAI_primary_window,prediction,D50,Primary scoring window
+SpliceAI_sensitivity_window,prediction,D500,Sensitivity scoring window
+geometry_score_threshold,prediction,0.2,Descriptive geometry classification only; continuous D50 scores retained for inference
+matched_control_sets,predictor_comparison,9,One set per RNA-resolved event
+matched_control_cap_per_event,predictor_comparison,10,Maximum controls assigned per event
+matched_control_total_comparisons,predictor_comparison,76,Total event-control comparisons
+matched_control_reuse,predictor_comparison,none,Controls not reused between event sets
+matched_control_variables,predictor_comparison,histology; DNA-consequence subclass; splice-boundary proximity; allele class; RNA coverage,Variables matched within event-specific sets
+splice_boundary_distance_categories,predictor_comparison,0; 1-2; 3-8; >=9 bp,Distance categories from splice boundary
+RNA_coverage_matching,predictor_comparison,histology_specific_quartile,Within-histology RNA coverage quartile
+matched_control_priority,predictor_comparison,same_gene_first,Same-gene controls prioritized
+matched_set_tie_weight,predictor_comparison,0.5,Ties contribute one half to probability of superiority
+primary_predictor_tests,predictor_comparison,2,Holm correction across the two primary D50 tests
+alternative_transcript_deduplication,transcript_context,identical_CDS_coordinate_signatures,Alternative coding transcripts with identical coordinate signatures deduplicated
+NMD_compatibility_final_junction,transcript_context,PTC_more_than_50_nt_upstream,Predicted premature stop relative to final exon–exon junction
+GTEx_lung_samples,normal_lung_context,655,GTEx lung samples queried through Snaptron v2.2
+GTEx_junction_detection,normal_lung_context,raw_count>0,Junction detected if raw count is greater than zero
+GTEx_cluster_minimum_coverage,normal_lung_context,>=10,Minimum local cluster coverage for evaluability
+NMD_compatibility,transcript_context,PTC>50_nt_before_final_exon_junction,Geometry-based compatibility definition
+reference_state_outer_CV,reference_state,5_fold_stratified,Stratified outer cross-validation
+reference_state_CV_repeats,reference_state,20,Repeated outer cross-validation
+reference_state_minimum_mean_AUC,reference_state,>=0.65,Categorical positioning only when mean AUC meets this threshold
+reference_state_feature_completeness,reference_state,>=80%,Minimum finite fraction for features within training folds
+ridge_penalty_selection,reference_state,nested_stratified_1SE,Penalty selected by nested stratified cross-validation using one-standard-error rule
+ridge_candidate_penalties,reference_state,40,Number of candidate penalty values
+expression_transform,reference_state,log2_TPM_plus_1,GDC STAR TPM transform
+CPTAC_bootstrap_iterations,CPTAC,10000,Bootstrap iterations
